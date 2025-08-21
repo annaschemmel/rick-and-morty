@@ -28,12 +28,10 @@ async function fetchcharacter() {
   return data.results;
 }
 
-export const dataResults = fetchcharacter();
+export const dataResults = await fetchcharacter();
 
-fetchcharacter();
-
-const newCard = createCharacterCard(); //parameter: no //Return:yes
-cardContainer.append(newCard);
+// const newCard = createCharacterCard(); //parameter: no //Return:yes
+// cardContainer.append(newCard);
 
 console.log(typeof dataResults);
 
@@ -41,12 +39,14 @@ console.log(typeof dataResults);
 // 2. We have a variable dataResults which gives us an array of all characters
 // 3. We will have to go through that array (loop) and create a card for each of the characters
 
-for (const character in dataResults) {
-  console.log(character);
-}
+for (const character of dataResults) {
+  //console.log(character);
+  const name = character.name;
+  const img = character.image;
+  const status = character.status;
+  const type = character.type;
+  const occurrences = character.episode.length;
 
-for (const character2 of dataResults) {
-  for (const name in character2) {
-    console.log(character2[name]);
-  }
+  const newCard = createCharacterCard(name, img, status, type, occurrences);
+  cardContainer.append(newCard);
 }
