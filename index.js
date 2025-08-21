@@ -23,30 +23,25 @@ async function fetchcharacter() {
   const urlCharacters = "https://rickandmortyapi.com/api/character";
   const response = await fetch(urlCharacters);
   const data = await response.json();
-  //console.log(data.results);
   console.log(data.results);
   return data.results;
 }
 
 export const dataResults = await fetchcharacter();
 
+
 // const newCard = createCharacterCard(); //parameter: no //Return:yes
 // cardContainer.append(newCard);
 
-console.log(typeof dataResults);
+
 
 // 1. We have a function that creates 1 card
 // 2. We have a variable dataResults which gives us an array of all characters
 // 3. We will have to go through that array (loop) and create a card for each of the characters
 
 for (const character of dataResults) {
-  //console.log(character);
-  const name = character.name;
-  const img = character.image;
-  const status = character.status;
-  const type = character.type;
-  const occurrences = character.episode.length;
-
-  const newCard = createCharacterCard(name, img, status, type, occurrences);
+  const newCard = createCharacterCard(character);
   cardContainer.append(newCard);
 }
+
+
