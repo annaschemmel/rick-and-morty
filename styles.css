@@ -29,4 +29,12 @@ main {
 
 .title {
   padding: 10px 0;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
 }
