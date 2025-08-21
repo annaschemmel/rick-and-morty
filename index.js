@@ -30,8 +30,8 @@ async function fetchcharacter() {
 export const dataResults = await fetchcharacter();
 
 
- //parameter: no //Return:yes
-
+// const newCard = createCharacterCard(); //parameter: no //Return:yes
+// cardContainer.append(newCard);
 
 
 
@@ -43,4 +43,5 @@ for (const character of dataResults) {
   const newCard = createCharacterCard(character);
   cardContainer.append(newCard);
 }
+
 
