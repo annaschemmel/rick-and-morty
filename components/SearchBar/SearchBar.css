@@ -1,4 +1,4 @@
-.search-bar-container {
+/* .search-bar-container {
   width: 300px;
 }
 
@@ -27,4 +27,52 @@
 
 .search-bar__icon {
   width: 20px;
+} */
+
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  background-color: var(--SpaceVoid);
+  border: 2px solid var(--PortalGlow);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.search-bar__input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--TechGlow);
+  border: none;
+  font-family: var(--font-family);
+}
+
+.search-bar__input::placeholder {
+  color: var(--RickHair);
+}
+
+.search-bar__button {
+  background-color: var(--PortalGlow);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar__button:hover {
+  background-color: var(--AlienPop);
+}
+
+.search-bar__icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }

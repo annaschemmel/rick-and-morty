@@ -1,4 +1,4 @@
-@import "components/CharacterCard/CharacterCard.css";
+/* @import "components/CharacterCard/CharacterCard.css";
 @import "components/SearchBar/SearchBar.css";
 @import "components/NavButton/NavButton.css";
 @import "components/NavPagination/NavPagination.css";
@@ -26,10 +26,79 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .title {
   padding: 10px 0;
   text-align: center;
-  margin: 20px auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 4rem;
+} */
+
+
+@import "components/CharacterCard/CharacterCard.css";
+@import "components/SearchBar/SearchBar.css";
+@import "components/NavButton/NavButton.css";
+@import "components/NavPagination/NavPagination.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('assets/fonts/get_schwifty.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --PortalGlow: #00FF88;   
+  --RickHair: #66CCFF;     
+  --MortyShirt: #FFFF66;   
+  --CosmicVibe: #9933FF;    
+  --SpaceVoid: #333333;    
+  --AlienPop: #FF66CC;     
+  --TechGlow: #F5F6F5;     
+  --GalaxyDark: #0D0D0D;    
+  --font-family: 'Get Schwifty', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--GalaxyDark);
+  color: var(--TechGlow);
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.title {
+  padding: 10px 0;
+  text-align: center;
+  color: var(--RickHair);
+  text-shadow: 0 0 10px var(--PortalGlow);
+  font-size: 2.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 4rem;
 }
