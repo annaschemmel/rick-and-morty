@@ -1,25 +1,40 @@
 /* .card-container {
   margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 20px auto;
+  justify-content: center;
 }
+
 .card {
   width: 300px;
   background-color: var(--color-secondary);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card__info {
   display: grid;
   grid-template-columns: auto 1fr;
 }
+
+.card__info > * {
+  border-bottom: 1px solid #b2b2b2;
+  padding: 15px 0 5px;
+}
+
 .card__content {
   padding: 10px 20px 20px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .card__info-description {
   text-align: right;
 }
-*/
+
 li {
   list-style: none;
 } 
