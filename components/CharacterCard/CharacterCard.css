@@ -35,21 +35,20 @@
   text-align: right;
 }
 
-li {
+/* li {
   list-style: none;
-} 
+}  */
 
 .card {
   background-color: var(--SpaceVoid);
   border: 2px solid var(--PortalGlow);
   border-radius: 10px;
   width: 300px;
-  height: 100%;
+  height: 550px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* line-height: 2rem; */
 }
-
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px var(--PortalGlow), 0 0 25px var(--CosmicVibe);
