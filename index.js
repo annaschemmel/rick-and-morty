@@ -1,4 +1,5 @@
 import { createCharacterCard } from "./components/CharacterCard/CharacterCard.js";
+//import { search } from "./components/SearchBar/SearchBar.js";
 
 const cardContainer = document.querySelector('[data-js="card-container"]');
 const searchBarContainer = document.querySelector(
@@ -13,14 +14,15 @@ const pagination = document.querySelector('[data-js="pagination"]');
 // States
 let maxPage = 1;
 let page = 1;
-const searchQuery = "";
+let searchQuery = "";
 
+// Task 1
 // 1. find the api url (https://rickandmortyapi.com/api)
 // 2. get fetch response from json
 // 3. console log data to check what we receive
 
 async function fetchcharacter() {
-  const urlCharacters = `https://rickandmortyapi.com/api/character?page=${page}`;
+  const urlCharacters = `https://rickandmortyapi.com/api/character?page=${page}&name=${searchQuery}`;
 
   const response = await fetch(urlCharacters);
   const data = await response.json();
@@ -51,10 +53,21 @@ prevButton.addEventListener("click", () => {
   fetchcharacter();
 });
 
+searchBar.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+  searchQuery = data.query;
+  fetchcharacter();
+  //console.log(data.query);
+  e.target.reset();
+});
+
 // fetchcharacter()
 
 //parameter: no //Return:yes
 
+// Task 2
 // 1. We have a function that creates 1 card
 // 2. We have a variable dataResults which gives us an array of all characters
 // 3. We will have to go through that array (loop) and create a card for each of the characters
