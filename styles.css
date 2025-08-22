@@ -23,6 +23,7 @@ body {
 
 main {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 10px;
 }
@@ -30,11 +31,5 @@ main {
 .title {
   padding: 10px 0;
   text-align: center;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 0 auto;
+  margin: 20px auto;
 }
