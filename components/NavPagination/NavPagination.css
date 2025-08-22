@@ -1,10 +1,27 @@
-.navigation {
-  height: 30px;
+/* .navigation {
+  height: 50px;
   display: grid;
   grid-template-columns: 100px 100px 100px;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .navigation__pagination {
   display: grid;
   place-items: center;
+} */
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.navigation__pagination {
+  color: var(--MortyShirt);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--PortalGlow);
 }
